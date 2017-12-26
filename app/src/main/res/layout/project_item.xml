@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_margin="@dimen/projectmargin"
+    android:id="@+id/card_view"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/cardCornerRadius"
+    app:cardElevation="@dimen/cardElevation"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/news_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/imageViewHeight"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/news_photo"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/imageViewHeight"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textSize"
+                    android:padding="@dimen/all_in_layout_paddingandmargin"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/projectTitle"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/news_desc"
+                android:maxLines="2"
+                android:layout_below="@+id/news_header"
+                android:textSize="@dimen/textSize"
+                android:layout_width="wrap_content"
+                android:hint="@string/projectDesc"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/functionButtons"
+                android:layout_below="@id/news_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_share"
+                    android:text="@string/share"
+                    android:background="#00000000"
+                    android:layout_marginLeft="@dimen/shareandmoremarginleft"
+                    android:layout_marginRight="@dimen/shareandmoremarginright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_more"
+                    android:background="#00000000"
+                    android:textColor="#7AD3E0"
+                    android:layout_marginLeft="@dimen/shareandmoremarginleft"
+                    android:layout_marginRight="@dimen/shareandmoremarginright"
+                    android:text="@string/readmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/projectsProgress"
+                android:layout_below="@id/functionButtons"
+
+                />
+
+        </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>
